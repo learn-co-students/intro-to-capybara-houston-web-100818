@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'pry'
 
 describe "GET '/' - Greeting Form" do
   # Code from previous example
@@ -22,7 +23,7 @@ describe "POST '/greet' - User Greeting" do
 
     fill_in(:user_name, :with => "Avi")
     click_button "Submit"
-
+    
     expect(page).to have_text("Hi Avi, nice to meet you!")
   end
 end
